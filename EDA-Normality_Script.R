@@ -23,8 +23,9 @@ qqPlot(myData$len)
 # qq plot with Stats package
 qqnorm(myData$len, pch = 1, frame = FALSE)
 qqline(myData$len, col = "red", lwd = 2)
+# Ideally our data points should be as close to the qq line as possible
 
-# Historgram and density plot with ggplot
+# Histogram and density plot with ggplot
 ggplot(myData, aes(x=len)) + 
   geom_histogram(aes(y=..density..), colour="black", fill="white")+
   geom_density(alpha=.2, fill="#FF6666") 
